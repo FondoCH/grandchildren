@@ -3,13 +3,12 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask('__name__')
 
-
-
+#this is an index route
 @app.route('/')
 def index():
     return render_template ('public/templates/index.html')
 
-
+#this is an introduction route
 @app.route('/home_intro')
 def home_intro():
     return render_template ('intro/templates/home_intro.html')
@@ -23,7 +22,7 @@ def family_head():
 def children():
     return render_template ('public/templates/children.html')
 
-
+#this is an over
 @app.route('/grand_children')
 def grand_children():
     return render_template ('public/templates/grand_children.html')
